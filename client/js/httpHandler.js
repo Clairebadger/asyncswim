@@ -6,10 +6,32 @@
   //TODO: build the swim command fetcher here
 
 
+
   /////////////////////////////////////////////////////////////////////
   // The ajax file uploader is provided for your convenience!
   // Note: remember to fix the URL below.
   /////////////////////////////////////////////////////////////////////
+
+  const getSwimCommand = () => {
+    $.get({
+      url: serverUrl,
+      success: (data) => {
+        console.log(data);
+        SwimTeam.move(data);
+      }
+    });
+  };
+/*
+  const getNewImage = () => {
+    $.get({
+      url: serverUrl + "/background.jpg",
+      success: (data) =>{
+
+      }
+    })
+  }*/
+
+  setInterval(getSwimCommand, 100);
 
   const ajaxFileUpload = (file) => {
     var formData = new FormData();
@@ -17,7 +39,7 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl + "/background.jpg",
       cache: false,
       contentType: false,
       processData: false,

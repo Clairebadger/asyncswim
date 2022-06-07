@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "formidable": "^2.0.1",
     "keypress": "^0.2.1",
-    "nodemon": "^2.0.7",
+    "mv": "^2.1.1",
+    "nodemon": "^2.0.16",
     "parse-multipart": "^1.0.4",
     "underscore": "^1.11.0"
   },
